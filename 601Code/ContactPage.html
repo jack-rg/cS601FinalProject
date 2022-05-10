@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<!--.................................................................................-->
+<!--601FinalProject-->
+<!--Professor Sheehan-->
+<!--ContactPage-->
+<!--Jack Giunta-->
+<!--05/03/2022-->
+<!--.................................................................................-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ContactPage</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./styles/Website.css" media="all">
+    <link rel="stylesheet" href="./styles/displays.css" media="all">
+    <link rel="stylesheet" href="./styles/colors.css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body id="myPage">
+
+    <script src="./scripts/Website.js" async defer>
+    </script>
+
+    <!-- Navbar -->
+    <div class="top">
+        <div class="bar darkMode">
+            <a class="menuTab button hiddenWhenMedium hiddenWhenLarge floatRight hover-white darkMode" onclick="toggleMiniNavBar()"><i class="fa fa-bars"></i></a>
+            <a href="./HomePage.html" class="menuTab button amber"><i class="fa fa-home margin-right"></i>Jack Giunta</a>
+            <a href="./AboutPage.html" class="menuTab button hiddenWhenSmall hover-white">About</a>
+            <a href="./WorkPage.html" class="menuTab button hiddenWhenSmall hover-white">Work</a>
+            <a href="./LeadershipPage.html" class="menuTab button hiddenWhenSmall hover-white">Leadership</a>
+            <a href="./ajax/NetworkPage.html" class="menuTab button hiddenWhenSmall hover-white">Network</a>
+            <a href="./ContactPage.html" class="menuTab button hiddenWhenSmall hover-white">Contact</a>
+            <div class="dropdownBtn hiddenWhenSmall">
+                <a href="./ProjectPage.html" class="button" title="Notifications">Projects <i class="fa fa-caret-down"></i></button></a>
+                <div class="dropdownMenu boxShadowLarge miniMenu">
+                    <a href="./Project1Page.html" class="menuTab button">COVID-19 State Legislation Tracking</a>
+                    <a href="./Project2Page.html" class="menuTab button">BU IFD</a>
+                    <a href="./Project3Page.html" class="menuTab button">BU CFFR</a>
+                    <a href="./Project4Page.html" class="menuTab button">Minute</a>
+                    <a href="./ProposalPage.html" class="menuTab button">Proposals</a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="miniNavBar" class="miniMenu darkMode hide hiddenWhenLarge hiddenWhenMedium">
+            <a href="/AboutPage.html" class="menuTab button">About</a>
+            <a href="/WorkPage.html" class="menuTab button">Work</a>
+            <a href="/LeadershipPage.html" class="menuTab button">Leadership</a>
+            <a href="/NetworkPage.html" class="menuTab button">Network</a>
+
+            <a href="/ContactPage.html" class="menuTab button">Contact</a>
+            <a href="/ProjectPage.html" class="menuTab button">Projects</a>
+        </div>
+    </div>
+
+    <!-- Title Header -->
+    <div class="display-container animate-opacity">
+        <div class="biggerFont text-black amber" style="width:100%;min-height:150px;max-height:400px;">
+            <div class="container display-middle margin-bottom center">
+                <h1>Contact Me</h1>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Contact Container -->
+    <div class="container paddingBigger lightMode" id="contact">
+        <div class="row">
+            <div class="col2 center">
+                <div class="paddingBig"><span class="biggerFont border-amber divider">Contact Me</span></div>
+                <p>Let me know if you have any questions or work to be done!</p>
+                <h3>Address</h3>
+                <p><i class="fa fa-map-marker text-amber biggerFont"></i>  Boston, US</p>
+                <p><i class="fa fa-phone text-amber biggerFont"></i> 973-919-4403</p>
+                <p><i class="fa fa-envelope-o text-amber biggerFont"></i>  jackrose@bu.edu</p>
+            </div>
+            <div class="col2">
+                <form class="container boxShadowLarge paddingBig white" action="/action_page.php" target="_blank">
+                    <div class="formField">
+                        <label>Name</label>
+                        <input class="input" type="text" name="Name" required>
+                    </div>
+                    <div class="formField">
+                        <label>Email</label>
+                        <input class="input" type="text" name="Email" required>
+                    </div>
+                    <div class="formField">
+                        <label>Message</label>
+                        <input class="input" type="text" name="Message" required>
+                    </div>
+                    <button type="submit" class="button floatRight darkMode">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer class="container darkMode center">
+        <h4>Follow Me</h4>
+        <a class="button bigFont amber" href="https://www.facebook.com/jack.giunta.7" title="Facebook"><i class="fa fa-facebook"></i></a>
+        <a class="button bigFont amber" href="twitter.com/jackzrg" title="Twitter"><i class="fa fa-twitter"></i></a>
+        <a class="button bigFont amber" href="linkedin.com/in/jackrgiunta/" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+        <a class="button bigFont amber" href="instagram.com/jackz.rg" title="Instagram"><i class="fa fa-instagram"></i></a>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+</html>

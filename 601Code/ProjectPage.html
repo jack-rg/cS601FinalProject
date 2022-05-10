@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<!--.................................................................................-->
+<!--601FinalProject-->
+<!--Professor Sheehan-->
+<!--ProjectPage-->
+<!--Jack Giunta-->
+<!--05/03/2022-->
+<!--.................................................................................-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ProjectPage</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./styles/Website.css" media="all">
+    <link rel="stylesheet" href="./styles/displays.css" media="all">
+    <link rel="stylesheet" href="./styles/colors.css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body id="myPage">
+    <script src="./scripts/Website.js" async defer>
+    </script>
+
+
+
+    <!-- Sidebar on click -->
+    <!-- Sidebar on click -->
+    <nav class="sidebar miniMenu white boxShadow slideRight biggerFont" style="display:none;z-index:2" id="mySidebar">
+        <a href="javascript:void(0)" onclick="sidebar_close()" class="menuTab button display-topright text-amber">Close
+    <i class="fa fa-remove"></i>
+  </a>
+        </a>
+        <a href="./ProposalPage.html" class="bar-item button">Add New Project</a>
+
+    </nav>
+
+    <!-- Navbar -->
+    <div class="top">
+        <div class="bar darkMode">
+            <a class="menuTab button hiddenWhenMedium hiddenWhenLarge floatRight hover-white darkMode" onclick="toggleMiniNavBar()"><i class="fa fa-bars"></i></a>
+            <a href="./HomePage.html" class="menuTab button amber"><i class="fa fa-home margin-right"></i>Jack Giunta</a>
+            <a href="./AboutPage.html" class="menuTab button hiddenWhenSmall hover-white">About</a>
+            <a href="./WorkPage.html" class="menuTab button hiddenWhenSmall hover-white">Work</a>
+            <a href="./LeadershipPage.html" class="menuTab button hiddenWhenSmall hover-white">Leadership</a>
+            <a href="./ajax/NetworkPage.html" class="menuTab button hiddenWhenSmall hover-white">Network</a>
+            <a href="./ContactPage.html" class="menuTab button hiddenWhenSmall hover-white">Contact</a>
+            <div class="dropdownBtn hiddenWhenSmall">
+                <a href="./ProjectPage.html" class="button" title="Notifications">Projects <i class="fa fa-caret-down"></i></button></a>
+                <div class="dropdownMenu boxShadowLarge miniMenu">
+                    <a href="./Project1Page.html" class="menuTab button">COVID-19 State Legislation Tracking</a>
+                    <a href="./Project2Page.html" class="menuTab button">BU IFD</a>
+                    <a href="./Project3Page.html" class="menuTab button">BU CFFR</a>
+                    <a href="./Project4Page.html" class="menuTab button">Minute</a>
+                    <a href="./ProposalPage.html" class="menuTab button">Proposals</a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="miniNavBar" class="miniMenu darkMode hide hiddenWhenLarge hiddenWhenMedium">
+            <a href="/AboutPage.html" class="menuTab button">About</a>
+            <a href="/WorkPage.html" class="menuTab button">Work</a>
+            <a href="/LeadershipPage.html" class="menuTab button">Leadership</a>
+            <a href="/NetworkPage.html" class="menuTab button">Network</a>
+
+            <a href="/ContactPage.html" class="menuTab button">Contact</a>
+            <a href="/ProjectPage.html" class="menuTab button">Projects</a>
+        </div>
+    </div>
+
+    <!-- Title Header -->
+    <div class="display-container animate-opacity">
+        <div class="biggerFont text-black amber" style="width:100%;min-height:150px;max-height:400px;">
+            <div class="container display-middle margin-bottom center">
+                <h1>My Projects</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Work Row -->
+    <div class="rowFull paddingBigger white" id="work">
+
+        <div class="col4 hover-shadow center">
+            <div class="boxShadow grayModeDark">
+                <div class="container">
+                    <h3>COVID-19 Legislation Tracking</h3>
+                    <h4>Front End Developer</h4>
+                    <button onclick="openProject1Modal()" class="button darkMode hover-amber margin-bottom" title="See Description">See Description</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col4 hover-shadow center">
+            <div class="boxShadow grayModeDark">
+                <div class="container">
+                    <h3>BU Initiative on Forced Displacement</h3>
+                    <h4>Lead Web Designer</h4>
+                    <button onclick="openProject2Modal()" class="button darkMode hover-amber margin-bottom" title="See Description">See Description</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col4 hover-shadow center">
+            <div class="boxShadow grayModeDark">
+                <div class="container">
+                    <h3>BU Center For Future Readiness</h3>
+                    <h4>Lead Web Developer</h4>
+                    <button onclick="openProject3Modal()" class="button darkMode hover-amber margin-bottom" title="See Description">See Description</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col4 hover-shadow center">
+            <div class="boxShadow grayModeDark">
+                <div class="container">
+                    <h3>Minute: Public Speaking App</h3>
+                    <h4>Technical Teammate</h4>
+                    <button onclick="openProject4Modal()" class="button darkMode hover-amber margin-bottom" title="See Description">See Description</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container display-bottomleft margin-bottom border border-amber">
+        <button onclick="sidebar_open()" class="button biggerFont darkMode hover-amber" title="Go To Latest News">Suggestion?</button>
+    </div>
+
+
+
+
+
+    <!-- Modals -->
+
+    <div id="project1Modal" class="modal">
+        <div class="modal-content boxShadowLarge slideDown">
+            <header class="container amber display-container">
+                <span onclick="closeProject1Modal()" class="button amber display-topright"><i class="fa fa-remove"></i></span>
+                <h4>COVID-19 Legislation Tracking</h4>
+            </header>
+            <div class="container">
+                <p>COVID State Legislation Tracking: Aided in creating a web-database of COVID-19 related policies to be analyzed for policy research, building experience with Ruby on Rails and ArcGIS mapping.
+                </p>
+            </div>
+            <footer class="container amber">
+                <p>Check out the <a href="https://github.com/jack-rg/TrackingLegislation">GitHub Repository!</a></p>
+            </footer>
+        </div>
+    </div>
+
+
+    <div id="project2Modal" class="modal">
+        <div class="modal-content boxShadowLarge slideDown">
+            <header class="container amber display-container">
+                <span onclick="closeProject2Modal()" class="button amber display-topright"><i class="fa fa-remove"></i></span>
+                <h4>Boston University Initiative on Forced Displacement</h4>
+            </header>
+            <div class="container">
+                <p> Redesigned custom web layouts for five different events to more easily display intercollegiate research when working as a web developer.
+                </p>
+            </div>
+            <footer class="container amber">
+                <p>Check out the <a href="https://www.ifd.bu.edu/">New Website!</a></p>
+            </footer>
+        </div>
+    </div>
+
+
+    <div id="project3Modal" class="modal">
+        <div class="modal-content boxShadowLarge slideDown">
+            <header class="container amber display-container">
+                <span onclick="closeProject3Modal()" class="button amber display-topright"><i class="fa fa-remove"></i></span>
+                <h4>Boston University Center For Future Readiness</h4>
+            </header>
+            <div class="container">
+                <p>BU Center for Future Readiness Lab: Designed a new website for two research teams when working as a web developer, utilizing WordPress software, Javascript for easier content navigation, and HTML/CSS/JavaScript code for a modern, user-friendly
+                    interface.
+                </p>
+            </div>
+            <footer class="container amber">
+                <p>Check out the <a href="https://sites.bu.edu/careerdevelopmentlab/">New Website!</a></p>
+            </footer>
+        </div>
+    </div>
+
+
+    <div id="project4Modal" class="modal">
+        <div class="modal-content boxShadowLarge slideDown">
+            <header class="container amber display-container">
+                <span onclick="closeProject4Modal()" class="button amber display-topright"><i class="fa fa-remove"></i></span>
+                <h4>Minute: A Public Speaking App</h4>
+            </header>
+            <div class="container">
+                <p>Minute: Front-end developer for the Minute web app which utilizes language processing APIs and React to analyze user speech for filler words to reinforce confident public speaking skills.</p>
+            </div>
+            <footer class="container amber">
+                <p>Check out the <a href="https://minute-app.herokuapp.com/">App</a></p>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="container darkMode center">
+        <h4>Follow Me</h4>
+        <a class="button bigFont amber" href="https://www.facebook.com/jack.giunta.7" title="Facebook"><i class="fa fa-facebook"></i></a>
+        <a class="button bigFont amber" href="twitter.com/jackzrg" title="Twitter"><i class="fa fa-twitter"></i></a>
+        <a class="button bigFont amber" href="linkedin.com/in/jackrgiunta/" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+        <a class="button bigFont amber" href="instagram.com/jackz.rg" title="Instagram"><i class="fa fa-instagram"></i></a>
+
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

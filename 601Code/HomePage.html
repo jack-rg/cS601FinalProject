@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<!--.................................................................................-->
+<!--601FinalProject-->
+<!--Professor Sheehan-->
+<!--HomePage-->
+<!--Jack Giunta-->
+<!--05/03/2022-->
+<!--.................................................................................-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HomePage</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./styles/Website.css" media="all">
+    <link rel="stylesheet" href="./styles/displays.css" media="all">
+    <link rel="stylesheet" href="./styles/colors.css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body id="myPage">
+    <script src="./scripts/Website.js" async defer>
+    </script>
+
+
+    <!-- Navbar -->
+    <div class="top">
+        <div class="bar darkMode">
+            <a class="menuTab button hiddenWhenMedium hiddenWhenLarge floatRight hover-white darkMode" onclick="toggleMiniNavBar()"><i class="fa fa-bars"></i></a>
+            <a href="./HomePage.html" class="menuTab button amber"><i class="fa fa-home margin-right"></i>Jack Giunta</a>
+            <a href="./AboutPage.html" class="menuTab button hiddenWhenSmall hover-white">About</a>
+            <a href="./WorkPage.html" class="menuTab button hiddenWhenSmall hover-white">Work</a>
+            <a href="./LeadershipPage.html" class="menuTab button hiddenWhenSmall hover-white">Leadership</a>
+            <a href="./ajax/NetworkPage.html" class="menuTab button hiddenWhenSmall hover-white">Network</a>
+            <a href="./ContactPage.html" class="menuTab button hiddenWhenSmall hover-white">Contact</a>
+            <div class="dropdownBtn hiddenWhenSmall">
+                <a href="./ProjectPage.html" class="button" title="Notifications">Projects <i class="fa fa-caret-down"></i></button></a>
+                <div class="dropdownMenu boxShadowLarge miniMenu">
+                    <a href="./Project1Page.html" class="menuTab button">COVID-19 State Legislation Tracking</a>
+                    <a href="./Project2Page.html" class="menuTab button">BU IFD</a>
+                    <a href="./Project3Page.html" class="menuTab button">BU CFFR</a>
+                    <a href="./Project4Page.html" class="menuTab button">Minute</a>
+                    <a href="./ProposalPage.html" class="menuTab button">Proposals</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="miniNavBar" class="miniMenu darkMode hide hiddenWhenLarge hiddenWhenMedium">
+            <a href="/AboutPage.html" class="menuTab button">About</a>
+            <a href="/WorkPage.html" class="menuTab button">Work</a>
+            <a href="/LeadershipPage.html" class="menuTab button">Leadership</a>
+            <a href="/NetworkPage.html" class="menuTab button">Network</a>
+
+            <a href="/ContactPage.html" class="menuTab button">Contact</a>
+            <a href="/ProjectPage.html" class="menuTab button">Projects</a>
+        </div>
+    </div>
+
+
+    <!-- Image Header -->
+    <div class="display-container fadeIn ">
+        <img src=".\Images\boston_header_image.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+        <div class="container display-middle margin-bottom center">
+            <img src=".\Images\JackGiuntaHeadshot.JPG" alt="Boss" style="width:45%" class="circle">
+            <h3 class="darkMode text-amber">Jack Giunta</h3>
+        </div>
+    </div>
+
+    <!-- About Container -->
+    <div class="container paddingBigger center" id="About">
+        <h2>CV & Portfolio</h2>
+        <div class="row"><br>
+            <p> Hello! My name is Jack Giunta and I am a graduating Senior at Boston University receiving my Masters Degree in Computer Science & Cognitive Psychology. This website serves as a CV for my work and leadership experience, as well as a portfolio
+                for many of the projects I have collaborated on. Click through the tabs above and below to learn more about my endeavors!</p>
+
+            <a href="./AboutPage.html">
+                <div class="col4">
+                    <img src="./Images/avatar.png" alt="Boss" style="width:45%" class="circle hoverTransparent">
+                    <h3>About Me</h3>
+                    <p>Biography and Education</p>
+                </div>
+            </a>
+
+            <a href="./WorkPage.html">
+                <div class="col4">
+                    <img src="./Images/avatar.png" alt="Boss" style="width:45%" class="circle hoverTransparent">
+                    <h3>Work Experience</h3>
+                    <p>Previous For-Pay Positions</p>
+                </div>
+            </a>
+
+            <a href="./LeadershipPage.html">
+                <div class="col4">
+                    <img src="./Images/avatar.png" alt="Boss" style="width:45%" class="circle hoverTransparent">
+                    <h3>Leadership Roles</h3>
+                    <p>Services I Offer</p>
+                </div>
+            </a>
+
+            <a href="./ProjectPage.html">
+                <div class="col4">
+                    <img src="./Images/avatar.png" alt="Boss" style="width:45%" class="circle hoverTransparent">
+                    <h3>Projects</h3>
+                    <p>Computer Science & Design Work</p>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Work Row -->
+    <div class="rowFull paddingBigger grayModeDark" id="work">
+
+        <div class="col4">
+            <h2>Recent Work</h2>
+            <p>I have held many jobs in my years, ranging from summer camps to construction to web design. Here are a few highlights! </p>
+        </div>
+
+        <div class="col4">
+            <div class="boxShadow white">
+                <div class="container">
+                    <h3>Technical Consultant</h3>
+                    <h4>Boston University Community Service Center</h4>
+                    <p>September 2018 - May 2022</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col4">
+            <div class="boxShadow white">
+                <div class="container">
+                    <h3>Teaching Assistant</h3>
+                    <h4>Boston University College of Arts & Sciences</h4>
+                    <p>December 2021 - May 2022</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col4">
+            <div class="boxShadow white">
+                <div class="container">
+                    <h3>Community Ambassador</h3>
+                    <h4>Boston University Spark!</h4>
+                    <br>
+                    <p>August 2020 - May 2022</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Container -->
+    <div class="container" style="position:relative">
+        <a onclick="location.href = '\WorkPage.html';" class="button biggerFont circle amber" style="position:absolute;top:-24px;right:24px">See More</a>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="container darkMode center">
+        <h4>Follow Me</h4>
+        <a class="button bigFont amber" href="https://www.facebook.com/jack.giunta.7" title="Facebook"><i class="fa fa-facebook"></i></a>
+        <a class="button bigFont amber" href="twitter.com/jackzrg" title="Twitter"><i class="fa fa-twitter"></i></a>
+        <a class="button bigFont amber" href="linkedin.com/in/jackrgiunta/" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+        <a class="button bigFont amber" href="instagram.com/jackz.rg" title="Instagram"><i class="fa fa-instagram"></i></a>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+</html>
