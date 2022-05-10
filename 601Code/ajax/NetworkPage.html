@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>NetworkPage</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../styles/Website.css" media="all">
+    <link rel="stylesheet" href="../styles/displays.css" media="all">
+    <link rel="stylesheet" href="../styles/colors.css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="index.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <div class="top">
+        <div class="bar darkMode">
+            <a class="menuTab button hiddenWhenMedium hiddenWhenLarge floatRight hover-white darkMode" onclick="toggleMiniNavBar()"><i class="fa fa-bars"></i></a>
+            <a href="../HomePage.html" class="menuTab button amber"><i class="fa fa-home margin-right"></i>Jack Giunta</a>
+            <a href="../AboutPage.html" class="menuTab button hiddenWhenSmall hover-white">About</a>
+            <a href="../WorkPage.html" class="menuTab button hiddenWhenSmall hover-white">Work</a>
+            <a href="../LeadershipPage.html" class="menuTab button hiddenWhenSmall hover-white">Leadership</a>
+            <a href="../ajax/NetworkPage.html" class="menuTab button hiddenWhenSmall hover-white">Network</a>
+            <a href="../ContactPage.html" class="menuTab button hiddenWhenSmall hover-white">Contact</a>
+            <div class="dropdownBtn hiddenWhenSmall">
+                <a href="../ProjectPage.html" class="button" title="Notifications">Projects <i class="fa fa-caret-down"></i></button></a>
+                <div class="dropdownMenu boxShadowLarge miniMenu">
+                    <a href="../Project1Page.html" class="menuTab button">COVID-19 State Legislation Tracking</a>
+                    <a href="../Project2Page.html" class="menuTab button">BU IFD</a>
+                    <a href="../Project3Page.html" class="menuTab button">BU CFFR</a>
+                    <a href="../Project4Page.html" class="menuTab button">Minute</a>
+                    <a href="../ProposalPage.html" class="menuTab button">Proposals</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="miniNavBar" class="miniMenu darkMode hide hiddenWhenLarge hiddenWhenMedium">
+            <a href="/AboutPage.html" class="menuTab button">About</a>
+            <a href="/WorkPage.html" class="menuTab button">Work</a>
+            <a href="/LeadershipPage.html" class="menuTab button">Leadership</a>
+            <a href="/NetworkPage.html" class="menuTab button">Network</a>
+
+            <a href="/ContactPage.html" class="menuTab button">Contact</a>
+            <a href="/ProjectPage.html" class="menuTab button">Projects</a>
+        </div>
+    </div>
+
+    <!-- Title Header -->
+    <div class="display-container animate-opacity">
+        <div class="biggerFont text-black amber" style="width:100%;min-height:150px;max-height:400px;">
+            <div class="container display-middle margin-bottom center">
+                <h1>Network</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About Container -->
+    <div class="container padding-64 center" id="About">
+        <h2>Join, edit, or leave my network of peers!</h2>
+    </div>
+
+
+    <div class="container paddingBig">
+        <div class="row darkMode ">
+            <div class="floatLeft margin">
+                <h2>Members</h2>
+            </div>
+            <div class="floatRight margin">
+                <button type="button" class="button amber" onclick="openJoinModal()">Join Network</button>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table center" style="width: 100%;">
+                <thead class="grayModeLight">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="mytable">
+                    <tr>
+                        <th scope="row" colspan="5">Loading...</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <div id="joinModal" class="modal">
+        <div class="modal-content boxShadowLarge slideDown">
+            <header class="container amber display-container">
+                <span onclick="closeJoinModal()" class="button amber display-topright"><i class="fa fa-remove"></i></span>
+                <h4>Join Network</h4>
+            </header>
+
+            <form class="container boxShadowLarge paddingBig white" onsubmit="userJoin()">
+                <input id="id" type="hidden">
+                <div class="formField">
+                    <input class="input" type="text" name="Name" id="firstName" placeholder="First" required>
+                </div>
+                <div class="formField">
+                    <input class="input" type="text" name="Last" id="lastName" placeholder="Last" required>
+                </div>
+                <div class="formField">
+                    <input class="input" type="text" name="UserName" id="userName" placeholder="Username" required>
+                </div>
+                <div class="formField">
+                    <input class="input" type="text" name="Email" id="email" placeholder="Email" required>
+                </div>
+                <button type="submit" class="button floatRight darkMode">Send</button>
+            </form>
+
+
+            <footer class="container amber">
+            </footer>
+        </div>
+    </div>
+
+
+    <div id="editModal" class="modal">
+        <div class="modal-content boxShadowLarge slideDown">
+            <header class="container amber display-container">
+                <span onclick="closeEditModal()" class="button amber display-topright"><i class="fa fa-remove"></i></span>
+                <h4>Edit Member</h4>
+            </header>
+
+            <form class="container boxShadowLarge paddingBig white" onsubmit="userEdit()">
+                <input id="id" type="hidden">
+                <div class="formField">
+                    <input class="input" type="text" name="Name" id="firstNameEdit" placeholder="First" required>
+                </div>
+                <div class="formField">
+                    <input class="input" type="text" name="Last" id="lastNameEdit" placeholder="Last" required>
+                </div>
+                <div class="formField">
+                    <input class="input" type="text" name="UserName" id="userNameEdit" placeholder="Username" required>
+                </div>
+                <div class="formField">
+                    <input class="input" type="text" name="Email" id="emailEdit" placeholder="Email" required>
+                </div>
+                <button type="submit" class="button floatRight darkMode">Send</button>
+            </form>
+
+
+            <footer class="container amber">
+            </footer>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="container darkMode center">
+        <h4>Follow Me</h4>
+        <a class="button bigFont amber" href="https://www.facebook.com/jack.giunta.7" title="Facebook"><i class="fa fa-facebook"></i></a>
+        <a class="button bigFont amber" href="twitter.com/jackzrg" title="Twitter"><i class="fa fa-twitter"></i></a>
+        <a class="button bigFont amber" href="linkedin.com/in/jackrgiunta/" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+        <a class="button bigFont amber" href="instagram.com/jackz.rg" title="Instagram"><i class="fa fa-instagram"></i></a>
+
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
