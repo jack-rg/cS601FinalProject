@@ -1,0 +1,23 @@
+[{
+        "id": "1",
+        "Service": "Tutoring",
+        "Price": 55,
+        "Timeline": "per hour"
+    },
+
+
+    {
+
+        "id": "2",
+        "Service": "Web Design",
+        "Price": 400,
+        "Timeline": "per month"
+    },
+    {
+
+        "id": "3",
+        "Service": "3D Printing",
+        "Price": 500,
+        "Timeline": "per print"
+    }
+]
