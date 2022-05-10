@@ -1,0 +1,534 @@
+/*Attribute styling for site-wide elements*/
+
+html {
+    box-sizing: border-box;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+
+/*Adapted from https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0
+}
+
+footer {
+    display: block;
+    padding-top: 32px!important;
+    padding-bottom: 32px!important
+}
+
+header {
+    display: block
+}
+
+menu {
+    display: block
+}
+
+nav {
+    display: block
+}
+
+section {
+    display: block
+}
+
+a {
+    background-color: transparent;
+    color: inherit;
+}
+
+a:active,
+a:hover {
+    outline-width: 0
+}
+
+img {
+    border-style: none;
+    vertical-align: middle
+}
+
+button {
+    font: inherit;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    padding: 12px 24px;
+    -webkit-appearance: button
+}
+
+.checkBox {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    padding: 10px;
+    margin: 3px;
+}
+
+input {
+    font: inherit;
+    margin: 0;
+    overflow: visible;
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%
+}
+
+h1 {
+    font-size: 36px
+}
+
+h2 {
+    font-size: 30px
+}
+
+h3 {
+    font-size: 24px
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0
+}
+
+.bigFont {
+    font-size: 18px!important
+}
+
+.biggerFont {
+    font-size: 24px!important
+}
+
+
+/*Button Design*/
+
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #000!important;
+    background-color: #ccc!important
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+
+/*Navigation and Menu design*/
+
+.ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+
+.ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd
+}
+
+.ul li:last-child {
+    border-bottom: none
+}
+
+.display-container {
+    position: relative
+}
+
+.dropdownBtn:hover .dropdownMenu {
+    display: block
+}
+
+.dropdownMenu {
+    cursor: auto;
+    color: #000;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    margin: 0;
+    padding: 0;
+    z-index: 1
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    position: fixed!important;
+    z-index: 1;
+    overflow: auto
+}
+
+.bar {
+    width: 100%;
+    overflow: hidden;
+    text-align: left!important
+}
+
+.bar .menuTab {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0
+}
+
+.bar .dropdownBtn {
+    position: static;
+    float: left
+}
+
+.miniMenu .menuTab {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0
+}
+
+.miniMenu.center .menuTab {
+    text-align: center
+}
+
+.container:after,
+.container:before,
+.row:after,
+.row:before,
+.rowFull:after,
+.rowFull:before,
+.bar:before,
+.bar:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+@media (min-width:601px) {
+    .col {
+        float: left;
+        width: 100%
+    }
+    .col4 {
+        float: left;
+        width: 24.99999%;
+        padding: 0 8px
+    }
+    .col3 {
+        float: left;
+        width: 33.33333%;
+        padding: 0 8px
+    }
+    .col2 {
+        float: left;
+        width: 49.99999%
+    }
+}
+
+
+/*Modal Designs*/
+
+.modal {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.modal-content {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 600px
+}
+
+
+/*Responsive Visibility*/
+
+.content {
+    max-width: 980px
+}
+
+.hide {
+    display: none!important
+}
+
+.show {
+    display: block!important
+}
+
+.transparent {
+    background-color: transparent!important
+}
+
+@media (max-width:600px) {
+    .modal-content {
+        margin: 0 10px;
+        width: auto!important
+    }
+    .modal {
+        padding-top: 30px
+    }
+    .hiddenWhenSmall {
+        display: none!important
+    }
+}
+
+@media (min-width:993px) {
+    .hiddenWhenLarge {
+        display: none!important
+    }
+}
+
+@media (max-width:992px) and (min-width:601px) {
+    .hiddenWhenMedium {
+        display: none!important
+    }
+}
+
+
+/*Hover and shadow designs*/
+
+.boxShadow {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+}
+
+.boxShadowLarge {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.hoverTransparent:hover {
+    opacity: 0.60
+}
+
+
+/*START ANIMATIONS*/
+
+
+/*syntax adapted from https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp*/
+
+.fadeIn {
+    animation: fade 0.8s
+}
+
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.slideDown {
+    position: relative;
+    animation: slideDown 0.4s
+}
+
+@keyframes slideDown {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.slideRight {
+    position: relative;
+    animation: slideRight 0.4s
+}
+
+@keyframes slideRight {
+    from {
+        left: -300px;
+        opacity: 0
+    }
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+
+/*END ANIMATIONS*/
+
+
+/*Thematic selectors for monochrome color scheme*/
+
+.darkMode {
+    color: #fff !important;
+    background-color: #000000 !important
+}
+
+.lightMode {
+    color: #000 !important;
+    background-color: #f0f0f0 !important
+}
+
+.grayModeLight {
+    color: #fff !important;
+    background-color: #999999 !important
+}
+
+.grayModeMid {
+    color: #fff !important;
+    background-color: #666 !important
+}
+
+.grayModeDark {
+    color: #fff !important;
+    background-color: #333 !important
+}
+
+
+/*Spacing and sections*/
+
+.circle {
+    border-radius: 50%
+}
+
+.makeBorder {
+    border-color: #000000;
+    border-style: solid;
+    border: 4px;
+}
+
+.border {
+    border: 1px solid #ccc!important
+}
+
+.divider {
+    border-bottom: 6px solid #ccc!important
+}
+
+.center {
+    text-align: center!important
+}
+
+.formField {
+    margin-top: 16px!important;
+    margin-bottom: 16px!important
+}
+
+.margin {
+    margin: 16px!important
+}
+
+.margin-top {
+    margin-top: 16px!important
+}
+
+.margin-bottom {
+    margin-bottom: 16px!important
+}
+
+.margin-right {
+    margin-right: 16px!important
+}
+
+.margin-left {
+    margin-left: 16px!important
+}
+
+.paddingBig {
+    padding-top: 16px!important;
+    padding-bottom: 16px!important
+}
+
+.paddingBigger {
+    padding-top: 64px!important;
+    padding-bottom: 64px!important
+}
+
+.floatLeft {
+    float: left!important
+}
+
+.floatRight {
+    float: right!important
+}
+
+.rowFull {
+    padding: 0 8px
+}
+
+.container {
+    padding: 0.01em 16px
+}
+
+#firstNameEdit {
+    color: rgb(0, 0, 0);
+}
+
+#lastNameEdit {
+    color: black;
+}
